@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-card
+    color="grey lighten-4"
+    flat
+    tile
+  >
+    <v-toolbar dense>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <v-toolbar-title>AndyMusic App</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+        <router-link to="/" class="ma-2">Home</router-link>
+        <router-link to="/tareas" class="ma-2">TareApp</router-link>
+        <router-link to="/about" class="ma-2">MusicApp</router-link>
+        <router-link to="/login" class="ma-2">Login</router-link>
+    </v-toolbar>
+  </v-card>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
